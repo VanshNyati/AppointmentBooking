@@ -10,11 +10,12 @@ import { ensureAdmin, ensureSlotsNext7Days } from "./seed.js";
 
 const app = express();
 
-// CORS (allow only your web origin)
+app.set("trust proxy", 1);
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN?.split(",").map((s) => s.trim()) || "*",
-    credentials: false,
+    origin: process.env.CORS_ORIGIN,
+    credentials: true,
   })
 );
 
