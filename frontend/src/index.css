@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100% }
+body { @apply bg-white text-gray-900 antialiased; }
+
+/* Reusable UI tokens */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl
+           bg-gradient-to-r from-brand-600 to-accent-600
+           px-4 py-2 font-medium text-white shadow-glow
+           hover:brightness-110 focus:outline-none
+           focus:ring-2 focus:ring-brand-500/40;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl border border-gray-200 text-gray-700 hover:bg-gray-50;
+  }
+  .h1 { @apply text-3xl md:text-4xl font-semibold; }
+  .h2 { @apply text-2xl md:text-3xl font-semibold; }
+}
