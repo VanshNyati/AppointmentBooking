@@ -20,3 +20,40 @@ body { @apply bg-white text-gray-900 antialiased; }
   .h1 { @apply text-3xl md:text-4xl font-semibold; }
   .h2 { @apply text-2xl md:text-3xl font-semibold; }
 }
+
+/* ---- Buttons (extends your existing tokens) ---- */
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border px-4 py-2 text-sm font-medium
+         border-slate-300 text-slate-700 hover:bg-slate-50 active:bg-slate-100;
+}
+
+/* ---- Table shell ---- */
+.table {
+  @apply w-full text-sm;
+}
+.table thead th {
+  @apply sticky top-0 z-[1] bg-slate-50 text-left font-semibold p-3 border-b border-slate-200;
+}
+.table tbody td {
+  @apply p-3 align-middle;
+}
+.table tbody tr {
+  @apply border-b border-slate-200;
+}
+.table tbody tr:nth-child(2n) {
+  @apply bg-white;
+}
+.table tbody tr:nth-child(2n+1) {
+  @apply bg-slate-50/40;
+}
+
+/* ---- Section headers & cards ---- */
+.section-title {
+  @apply text-base font-semibold text-slate-700;
+}
+.scroll-card {
+  @apply overflow-auto rounded-xl border border-slate-200 bg-white;
+}
+.badge {
+  @apply inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-600;
+}
